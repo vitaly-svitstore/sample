@@ -38,8 +38,17 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rspec-rails', '2.13.1'
-  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'guard', '= 2.7.3'
+  gem 'guard-rspec'
+  gem 'rspec-rails', '~> 2.13.1'
+  gem 'guard-spinach', '~> 0.0.2'
+  gem 'guard-rails'
+  gem 'guard-rails-assets'
+  gem 'spinach-rails', '~> 0.2.1'
+  gem 'spork-rails', '~> 4.0.0'
+  gem 'guard-spork', '~> 1.5.0'
+  gem 'childprocess', '~> 0.5.5'
+# Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -49,6 +58,7 @@ end
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
+  gem 'growl', '1.0.3'
 end
 
 group :production do
